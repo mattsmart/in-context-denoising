@@ -19,17 +19,17 @@ dir_parent = DIR_RUNS
 
 # multirun - case 0  (linear)
 dir_multirun_LSA = dir_parent + os.sep + 'multitraj_ensemble_case0_TV1nrOL_adam_e100_L500'
-dir_multirun_S = dir_parent + os.sep + 'multitraj_ensemble_case0_TV2nrOL_adam_e100_L500'
+dir_multirun_S   = dir_parent + os.sep + 'multitraj_ensemble_case0_TV2nrOL_adam_e100_L500'
 MARKER = ['^', 'o']
 multiruns_to_merge = [dir_multirun_LSA, dir_multirun_S]
 
-# multirun - Case  (GMM), 2 (manifold/subspheres)
-#dir_multirun_S = dir_parent + os.sep + 'multitraj_ensemble_case1_zpt1_p8_spt02_TV2nrOL_adam_e200_L500'
+# multirun - Case 1 (GMM)
+#dir_multirun_S = dir_parent + os.sep + 'multitraj_ensemble_case1_TV2nrOL_adam_e200_L500'
 #MARKER = ['o']
 #multiruns_to_merge = [dir_multirun_S]
 
+# multirun - Case 2 (manifold/sub-spheres)
 #dir_multirun_S = dir_parent + os.sep + 'multitraj_ensemble_case2_zpt1_TV2nrOL_adam_e200_L500'
-#dir_multirun_S = dir_parent + os.sep + 'multitraj_ensemble_case2_zpt1_TV2nrOL_adam_e400_L500'
 #MARKER = ['o']
 #multiruns_to_merge = [dir_multirun_S]
 

@@ -22,7 +22,7 @@ def gamma_star(sigma2_pure_context, sigma2_corruption):
 
 
 dir_parent = DIR_RUNS
-dir_multirun = dir_parent + os.sep + 'multitraj_ensemble_case0_TV1nrOL_adam_e100_Lvary_dseed0_wseed0'
+dir_multirun = dir_parent + os.sep + 'multitraj_ensemble_case0_TV1nrOL_adam_e100_Lvary'
 
 COLOR_TRAIN      = '#4C72B0'
 COLOR_TEST       = '#7BC475'

@@ -405,16 +405,30 @@ def multirun_ensemble(
 
 if __name__ == '__main__':
 
-    #models_to_run = ['TransformerModelV1noresOmitLast', 'TransformerModelV2noresOmitLast']
-    models_to_run = ['TransformerModelV2noresOmitLast']
+    # Models: see nn_model_base.py for details
+    models_to_run = [
+        'TransformerModelV1noresOmitLast',   # -->  Linear Attention + no residual term
+        'TransformerModelV2noresOmitLast',   # --> Softmax Attention + no residual term
+    ]
 
-    datagen_case_to_epochs = {0: 100, 1: 200, 2: 200}  # 2: 4000
+    datagen_case_to_epochs = {0: 100, 1: 200, 2: 200}
 
-    #for datagen_case in [0, 1, 2]:
-    for datagen_case in [1, 2]:
+    # Cases:
+    #   0  ->  Linear
+    #   1  ->  Clustering (Gaussian mixtures)
+    #   2  ->  Manifold (sub-spheres)
+    """
+    for datagen_case in [0, 1, 2]:
         for nn_model in models_to_run:
             multirun_ensemble(nn_model=nn_model, datagen_case=datagen_case,
                               n_ensemble=6,
                               epochs=datagen_case_to_epochs[datagen_case],
                               show_loss=False,
                               fixed_context_len=500)
+    """
+    for nn_model in models_to_run:
+        multirun_ensemble(nn_model=nn_model, datagen_case=0,
+                          n_ensemble=6,
+                          epochs=datagen_case_to_epochs[0],
+                          show_loss=False,
+                          fixed_context_len=None)

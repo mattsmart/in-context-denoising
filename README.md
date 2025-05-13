@@ -1,6 +1,8 @@
 # in-context-denoising
 
-Code for "In-context denoising with one-layer transformers: connections between attention and associative memory retrieval" (ICML 2025)
+[![arXiv](https://img.shields.io/badge/arXiv-2502.05164-b31b1b.svg)](https://arxiv.org/abs/2502.05164)
+
+Code for the paper "In-context denoising with one-layer transformers: connections between attention and associative memory retrieval" (ICML 2025).
 
 This repository implements a framework connecting attention-based architectures with dense associative memory (DAM) networks. We demonstrate that certain denoising problems can be solved optimally with a single-layer transformer, where the trained attention layer performs a single gradient descent update on a context-aware DAM energy landscape.
 
@@ -15,7 +17,7 @@ This repository implements a framework connecting attention-based architectures 
 #### Figure generation (general steps to reproduce)
 - **Figure 3**
   - run `src/nn_train_ensemble.py` to train models with different seeds (do this for each case)   
-  - run `scripts/replot_multitraj_loss.py`, pointing to pairs of output directories from step 1)
+  - run `scripts/replot_multitraj_loss.py`, pointing to pairs of output directories from step 1
 
 - **Figure 4a**
   - run `src/nn_train_ensemble.py` to train models at varying context length (linear subspace task)
