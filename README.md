@@ -4,7 +4,8 @@
 
 Code for the paper "In-context denoising with one-layer transformers: connections between attention and associative memory retrieval" (ICML 2025).
 
-This repository implements a framework connecting attention-based architectures with dense associative memory (DAM) networks. We demonstrate that certain denoising problems can be solved optimally with a single-layer transformer, where the trained attention layer performs a single gradient descent update on a context-aware DAM energy landscape.
+This repository implements a framework connecting attention-based architectures with dense associative memory (DAM) networks. 
+We demonstrate that certain denoising problems can be solved optimally with a one-layer transformer, with the trained attention mechanism performing a single gradient descent update on a context-aware DAM energy landscape.
 
 #### Dependencies
 - Python >=3.9 with libraries listed in `requirements.txt`
